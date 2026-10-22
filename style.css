@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif; /* sans-serif = reserva se a fonte não carregar */
+    background-color: #e2cfb9;
+    color: #333333;
+    text-align: center;
+}
+
+/* ---------- Topo ---------- */
+header {
+    /* A camada escura por cima da foto garante que o texto branco seja legível */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("imagens/fundo-header.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+}
+
+h1 {
+    /* Mínimo 36px, máximo 60px; no meio, 8% da largura da tela */
+    font-size: clamp(36px, 8vw, 60px);
+    margin: 0 0 10px;
+}
+
+header a {
+    display: inline-block;
+    background-color: #e3b912;
+    color: #333333;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: 0.7s;
+    text-decoration: none;
+}
+
+header a:hover {
+    background-color: #b89714;
+    transform: translateY(-3px);
+}
+
+h2 {
+    color: #c0392b;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+/* ---------- Filtros ---------- */
+.filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filtros button {
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border: 2px solid #c0392b;
+    border-radius: 30px;
+    background-color: white;
+    color: #c0392b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtros button:hover {
+    background-color: #fdecea;
+}
+
+/* Filtro selecionado: o JavaScript coloca a classe "ativo" no botão clicado */
+.filtros button.ativo {
+    background-color: #c0392b;
+    color: white;
+}
+
+/* ---------- Produtos ---------- */
+.produtos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid #c0392b;
+    background-color: white;
+    border-radius: 15px;
+    width: 250px;
+    padding: 15px;
+    transition: 0.4s;
+    animation: aparecer 0.4s ease;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.produto img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.preco {
+    margin-top: auto; /* empurra o preço pra baixo: todos ficam alinhados */
+    font-weight: bold;
+    font-size: 20px;
+    color: #c0392b;
+}
+
+/* Botão amarelo usado em "Adicionar" e em "Enviar pedido" */
+.adicionar,
+#enviar-pedido {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #e3b912;
+    color: #333333;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: 0.7s;
+    align-self: center;
+}
+
+.adicionar:hover,
+#enviar-pedido:hover {
+    background-color: #b89714;
+    transform: translateY(-3px);
+}
+
+/* ---------- Carrinho ---------- */
+#carrinho {
+    max-width: 500px;
+    margin: 40px auto 0;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#lista-carrinho {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eeeeee;
+    text-align: left;
+}
+
+.remover {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border: 2px solid #c0392b;
+    border-radius: 30px;
+    background-color: white;
+    color: #c0392b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.remover:hover {
+    background-color: #fdecea;
+}
+
+#total {
+    font-weight: bold;
+    font-size: 20px;
+    color: #c0392b;
+}
+
+/* ---------- Onde estamos ---------- */
+.local iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 300px;
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.local #status {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.aberto {
+    background-color: #2ecc71;
+}
+
+.fechado {
+    background-color: #c0392b;
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+    background-color: #333333;
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    color: #e3b912;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.zap-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    background-color: #25D366;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Utilitários ---------- */
+.escondido {
+    display: none;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

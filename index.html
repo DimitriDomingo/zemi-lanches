@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zemi Lanches | Xis e lanches em Não-Me-Toque</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Só a Poppins, só os pesos usados: o site carrega mais rápido -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Zemi Lanches</h1>
+        <p>Xis artesanal feito na hora, entregue quentinho em Não-Me-Toque</p>
+        <a href="https://wa.me/5554999999999?text=Olá!%20Quero%20fazer%20um%20pedido">Peça pelo WhatsApp</a>
+    </header>
+
+    <section>
+        <h2>Nosso cardápio</h2>
+        <div class="filtros">
+            <button class="ativo" data-filtro="todos">Todos</button>
+            <button data-filtro="lanche">Lanches</button>
+            <button data-filtro="porcao">Porções</button>
+            <button data-filtro="bebida">Bebidas</button>
+        </div>
+
+        <div class="produtos">
+            <div class="produto" data-categoria="lanche">
+                <img src="imagens/xis.jpg" alt="Xis salada">
+                <h3>Xis Salada</h3>
+                <p>Pão macio, hambúrguer artesanal, queijo, alface, tomate e maionese da casa.</p>
+                <p class="preco">R$ 20,00</p>
+                <button class="adicionar" data-nome="Xis Salada" data-preco="20">Adicionar</button>
+            </div>
+            <div class="produto" data-categoria="lanche">
+                <img src="imagens/xis-bacon.jpg" alt="Xis bacon">
+                <h3>Xis Bacon</h3>
+                <p>Hambúrguer artesanal, bacon crocante, queijo derretido, alface e tomate.</p>
+                <p class="preco">R$ 26,00</p>
+                <button class="adicionar" data-nome="Xis Bacon" data-preco="26">Adicionar</button>
+            </div>
+            <div class="produto" data-categoria="porcao">
+                <img src="imagens/batata.jpg" alt="Porção de batata frita">
+                <h3>Batata Frita</h3>
+                <p>Porção sequinha e crocante, serve bem duas pessoas.</p>
+                <p class="preco">R$ 17,00</p>
+                <button class="adicionar" data-nome="Batata Frita" data-preco="17">Adicionar</button>
+            </div>
+            <div class="produto" data-categoria="lanche">
+                <img src="imagens/xis-strogonoff.jpg" alt="Xis strogonoff">
+                <h3>Xis Strogonoff</h3>
+                <p>Pão macio, hambúrguer artesanal, queijo, alface, tomate, strogonoff e maionese da casa.</p>
+                <p class="preco">R$ 28,00</p>
+                <button class="adicionar" data-nome="Xis Strogonoff" data-preco="28">Adicionar</button>
+            </div>
+            <div class="produto" data-categoria="lanche">
+                <img src="imagens/xis-frango.jpg" alt="Xis frango">
+                <h3>Xis Frango</h3>
+                <p>Hambúrguer artesanal, frango empanado, queijo coalho, alface e tomate.</p>
+                <p class="preco">R$ 22,00</p>
+                <button class="adicionar" data-nome="Xis Frango" data-preco="22">Adicionar</button>
+            </div>
+            <div class="produto" data-categoria="bebida">
+                <img src="imagens/refrigerante.jpg" alt="Refrigerante">
+                <h3>Refrigerante</h3>
+                <p>Refrigerante lata.</p>
+                <p class="preco">R$ 7,00</p>
+                <button class="adicionar" data-nome="Refrigerante" data-preco="7">Adicionar</button>
+            </div>
+            <div class="produto" data-categoria="bebida">
+                <img src="imagens/suco.jpg" alt="Suco">
+                <h3>Suco de frutas naturais</h3>
+                <p>700ml de suco de frutas naturais.</p>
+                <p class="preco">R$ 14,00</p>
+                <button class="adicionar" data-nome="Suco de frutas naturais" data-preco="14">Adicionar</button>
+            </div>
+        </div>
+
+        <!-- Carrinho: lista, total e botão de enviar -->
+        <div id="carrinho">
+            <h3>Seu pedido</h3>
+            <p id="carrinho-vazio">Seu carrinho está vazio.</p>
+            <ul id="lista-carrinho"></ul>
+            <p id="total"></p>
+            <button id="enviar-pedido" class="escondido">Enviar pedido pelo WhatsApp</button>
+        </div>
+    </section>
+
+    <section class="local">
+        <h2>Onde estamos</h2>
+        <p id="status">Verificando...</p>
+        <p>Rua Exemplo, 123 - Centro, Não-Me-Toque/RS</p>
+        <p>Terça a domingo, das 18h às 23h30</p>
+        <p>Entrega na cidade toda · Pix, cartão e dinheiro</p>
+        <iframe src="https://www.google.com/maps?q=Não-Me-Toque,RS&output=embed" loading="lazy" title="Mapa de Não-Me-Toque"></iframe>
+    </section>
+
+    <footer>
+        <p>Siga no <a href="https://instagram.com/">Instagram</a> e fique por dentro das promoções</p>
+        <p>© 2026 Zemi Lanches</p>
+    </footer>
+
+    <a class="zap-fixo" href="https://wa.me/5554999999999?text=Olá!%20Quero%20fazer%20um%20pedido">💬 Peça pelo Zap</a>
+    <script src="scripts.js"></script>
+</body>
+</html>
